@@ -1,6 +1,23 @@
 <project name="Persistent Project" default="all">
+	
+	<property environment="env"/>
+	
 	<target name="all" depends="init">
 		<echo>Welcome to ANT Script!!</echo>
+		<echo message="Build number is set to = ${env.BUILD_NUMBER}"/>
+		<echo message="Build id is set to = ${env.BUILD_ID}"/>
+		<echo message="Job name is set to = ${env.JOB_NAME}"/>
+		<echo message="Build tag is set to = ${env.BUILD_TAG}"/>
+		<echo message="Current job is = ${env.JOB_NAME}-${env.BUILD_NUMBER}"/>
+		<echo message="EXECUTOR_NUMBER is set to = ${env.EXECUTOR_NUMBER}"/>
+		<echo message="NODE_NAME is set to = ${env.NODE_NAME}"/>
+		<echo message="NODE_LABELS is set to = ${env.NODE_LABELS}"/>
+		<echo message="ANT_HOME is set to = ${env.ANT_HOME}"/>
+		<echo message="WORKSPACE is set to = ${env.WORKSPACE}"/>
+		<echo message="HUDSON_URL is set to = ${env.HUDSON_URL}"/>
+		<echo message="JOB_URL is set to = ${env.JOB_URL}"/>
+		<echo message="BUILD_URL is set to = ${env.BUILD_URL}"/>
+		
 	</target>
 	
 	<target name="init" depends="clean">
